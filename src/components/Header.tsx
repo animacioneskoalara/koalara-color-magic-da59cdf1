@@ -66,7 +66,7 @@ const Header = () => {
             </a>
           ))}
           <a
-            href="https://wa.me/34600000000?text=Hola!%20Quiero%20reservar%20una%20fiesta"
+            href="https://wa.me/34633049951?text=Hola!%20Quiero%20reservar%20una%20fiesta"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-primary text-primary-foreground font-display px-5 py-2.5 rounded-full text-sm text-center shadow-brand"

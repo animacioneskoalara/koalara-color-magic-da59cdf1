@@ -2,6 +2,9 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
+import { createRequire } from "module";
+
+const require = createRequire(import.meta.url);
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
@@ -16,6 +19,8 @@ export default defineConfig(({ mode }) => ({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
+      "react": path.dirname(require.resolve("react/package.json")),
+      "react-dom": path.dirname(require.resolve("react-dom/package.json")),
     },
   },
 }));

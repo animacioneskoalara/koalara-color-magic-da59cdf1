@@ -1,28 +1,31 @@
 import { motion } from "framer-motion";
-import { Star, Sparkles, Crown, Check } from "lucide-react";
+import { Clock, Puzzle, Users, Sparkles, Check } from "lucide-react";
 
-const packs = [
+const highlights = [
   {
-    name: "Pack Básico",
-    price: "150€",
-    icon: Star,
-    popular: false,
-    features: ["1 Animador", "Juegos y música", "1h 30min de diversión", "Globoflexia básica"],
+    icon: Clock,
+    title: "Sin horarios fijos",
+    desc: "Tú eliges la duración que mejor se adapte a tu evento.",
   },
   {
-    name: "Pack Estrella",
-    price: "250€",
-    icon: Sparkles,
-    popular: true,
-    features: ["2 Animadores", "Pintacaras + Globoflexia", "2h de diversión", "Show de magia", "Música y baile"],
+    icon: Puzzle,
+    title: "Totalmente personalizable",
+    desc: "Contrata exactamente lo que quieras: juegos, shows, pintacaras, disfraces y mucho más.",
   },
   {
-    name: "Pack Premium",
-    price: "400€",
-    icon: Crown,
-    popular: false,
-    features: ["3 Animadores", "Todo del Pack Estrella", "Photocall temático", "Disfraces y personajes", "3h de diversión"],
+    icon: Users,
+    title: "Monitores profesionales",
+    desc: "Nosotros nos encargamos de los monitores, todo el material y los mejores precios.",
   },
+];
+
+const includes = [
+  "Monitores titulados y con experiencia",
+  "Todo el material necesario incluido",
+  "Precios adaptados a tu presupuesto",
+  "Duración flexible: tú decides",
+  "Actividades para todas las edades",
+  "Atención personalizada desde el primer contacto",
 ];
 
 const container = { hidden: {}, show: { transition: { staggerChildren: 0.1 } } };
@@ -41,10 +44,10 @@ const PacksSection = () => (
         className="text-center mb-14"
       >
         <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground">
-          Nuestros <span className="text-primary">Packs</span>
+          Tu fiesta, <span className="text-primary">a tu medida</span>
         </h2>
-        <p className="mt-3 text-muted-foreground font-body text-lg max-w-xl mx-auto">
-          Elige el plan perfecto para la fiesta de tus sueños
+        <p className="mt-4 text-muted-foreground font-body text-lg max-w-2xl mx-auto text-pretty">
+          No hay horarios ni paquetes fijos. Elige la duración que quieras y contrata todo lo que desees para la diversión de los niños. Nosotros nos encargamos de monitores, material y precios.
         </p>
       </motion.div>
 
@@ -53,77 +56,56 @@ const PacksSection = () => (
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto"
+        className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-14"
       >
-        {packs.map((pack) => {
-          const Icon = pack.icon;
+        {highlights.map((h) => {
+          const Icon = h.icon;
           return (
             <motion.div
-              key={pack.name}
+              key={h.title}
               variants={item}
               whileHover={{ scale: 1.02, y: -4 }}
-              transition={{ type: "spring", stiffness: 200, damping: 15 }}
-              className={`relative rounded-3xl p-8 flex flex-col items-center text-center transition-shadow duration-500 ${
-                pack.popular
-                  ? "bg-koala-green-light border-2 border-primary shadow-brand"
-                  : "bg-card border border-border shadow-sm"
-              }`}
+              className="rounded-3xl p-8 flex flex-col items-center text-center bg-koala-green-light border border-primary/20 shadow-brand"
             >
-              {pack.popular && (
-                <span className="absolute -top-3 bg-accent text-accent-foreground font-display text-xs font-semibold px-4 py-1 rounded-full">
-                  Más Popular
-                </span>
-              )}
-              <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-4 ${
-                pack.popular ? "bg-primary text-primary-foreground" : "bg-secondary text-primary"
-              }`}>
+              <div className="w-14 h-14 rounded-2xl bg-primary text-primary-foreground flex items-center justify-center mb-4">
                 <Icon size={28} strokeWidth={1.5} />
               </div>
-              <h3 className="font-display text-xl font-bold text-foreground">{pack.name}</h3>
-              <p className="text-3xl font-display font-bold text-primary mt-2">{pack.price}</p>
-              <ul className="mt-6 space-y-2 text-left w-full">
-                {pack.features.map((f) => (
-                  <li key={f} className="flex items-center gap-2 text-foreground/80 font-body text-sm">
-                    <Check size={16} className="text-primary flex-shrink-0" />
-                    {f}
-                  </li>
-                ))}
-              </ul>
-              <a
-                href={`https://wa.me/34633049951?text=Hola!%20Me%20interesa%20el%20${encodeURIComponent(pack.name)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`mt-8 w-full py-3 rounded-full font-display font-semibold text-center transition-transform hover:scale-105 ${
-                  pack.popular
-                    ? "bg-primary text-primary-foreground shadow-brand"
-                    : "bg-secondary text-primary hover:bg-primary hover:text-primary-foreground"
-                }`}
-              >
-                Reservar
-              </a>
+              <h3 className="font-display text-xl font-bold text-foreground">{h.title}</h3>
+              <p className="text-muted-foreground font-body text-sm mt-2">{h.desc}</p>
             </motion.div>
           );
         })}
       </motion.div>
 
-      {/* Extras */}
+      {/* Lo que incluimos */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="mt-14 text-center"
+        className="max-w-2xl mx-auto bg-card rounded-3xl p-8 border border-border shadow-sm"
       >
-        <h3 className="font-display text-xl font-bold text-foreground mb-4">Extras Opcionales</h3>
-        <div className="flex flex-wrap justify-center gap-3">
-          {["Castillo hinchable +80€", "Algodón de azúcar +40€", "Photocall +60€", "Hora extra +50€"].map((extra) => (
-            <span
-              key={extra}
-              className="bg-koala-orange-light text-foreground font-body text-sm px-5 py-2 rounded-full border border-accent/20"
-            >
-              {extra}
-            </span>
-          ))}
+        <div className="flex items-center gap-3 mb-6">
+          <div className="w-11 h-11 rounded-2xl bg-koala-orange-light flex items-center justify-center">
+            <Sparkles size={22} className="text-accent" strokeWidth={1.5} />
+          </div>
+          <h3 className="font-display text-xl font-bold text-foreground">¿Qué incluimos?</h3>
         </div>
+        <ul className="grid sm:grid-cols-2 gap-3">
+          {includes.map((item) => (
+            <li key={item} className="flex items-center gap-2 text-foreground/80 font-body text-sm">
+              <Check size={16} className="text-primary flex-shrink-0" />
+              {item}
+            </li>
+          ))}
+        </ul>
+        <a
+          href="https://wa.me/34633049951?text=Hola!%20Quiero%20información%20sobre%20vuestras%20animaciones%20a%20medida"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-8 block w-full py-3 rounded-full bg-accent text-accent-foreground font-display font-semibold text-center hover:scale-105 transition-transform shadow-accent"
+        >
+          ¡Pide tu presupuesto sin compromiso!
+        </a>
       </motion.div>
     </div>
   </section>

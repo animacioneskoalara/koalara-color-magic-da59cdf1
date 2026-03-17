@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import heroImg from "@/assets/hero-party.jpg";
 
-const spring = { type: "spring", stiffness: 100, damping: 14 };
+const spring = { type: "spring" as const, stiffness: 100, damping: 14 };
 
 const HeroSection = () => (
   <section id="inicio" className="pt-24 pb-16 md:pt-32 md:pb-24 bg-secondary">

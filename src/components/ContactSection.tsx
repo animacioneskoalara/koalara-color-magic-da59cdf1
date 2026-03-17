@@ -8,7 +8,7 @@ const ContactSection = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const text = `Hola! Soy ${form.name}. ${form.message}. Mi email: ${form.email}`;
-    window.open(`https://wa.me/34600000000?text=${encodeURIComponent(text)}`, "_blank");
+    window.open(`https://wa.me/34633049951?text=${encodeURIComponent(text)}`, "_blank");
   };
 
   return (

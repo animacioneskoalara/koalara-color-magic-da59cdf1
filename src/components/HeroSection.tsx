@@ -24,7 +24,7 @@ const HeroSection = () => (
         </p>
         <div className="mt-8 flex flex-wrap gap-4">
           <a
-            href="https://wa.me/34600000000?text=Hola!%20Quiero%20reservar%20una%20fiesta"
+            href="https://wa.me/34633049951?text=Hola!%20Quiero%20reservar%20una%20fiesta"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-accent text-accent-foreground font-display font-semibold px-8 py-4 rounded-full text-lg hover:scale-105 transition-transform shadow-accent animate-pulse-soft"

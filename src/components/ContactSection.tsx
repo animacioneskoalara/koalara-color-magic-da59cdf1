@@ -89,7 +89,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <h3 className="font-display font-semibold text-foreground">WhatsApp</h3>
-                <p className="text-muted-foreground font-body text-sm">+34 600 000 000</p>
+                <p className="text-muted-foreground font-body text-sm">+34 633 049 951</p>
                 <p className="text-muted-foreground font-body text-xs mt-1">Respondemos en menos de 1 hora</p>
               </div>
             </div>

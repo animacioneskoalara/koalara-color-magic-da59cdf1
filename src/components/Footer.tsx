@@ -1,4 +1,4 @@
-import logo from "@/assets/logo-koalara.jpg";
+import logo from "@/assets/logo-koalara.png";
 
 const Footer = () => (
   <footer className="bg-foreground py-10">

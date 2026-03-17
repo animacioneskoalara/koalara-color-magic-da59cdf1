@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
-import { Palette, Music, Wand2, PartyPopper, Drama, Gamepad2 } from "lucide-react";
+import { Palette, Music, PartyPopper, Drama, Gamepad2 } from "lucide-react";
 
 const services = [
-  { icon: Wand2, title: "Shows de Magia", desc: "Espectáculos interactivos que dejan a los niños con la boca abierta." },
   { icon: Palette, title: "Pintacaras", desc: "Diseños creativos y coloridos para los más pequeños." },
   { icon: Music, title: "Música y Baile", desc: "Coreografías y juegos musicales para mover el esqueleto." },
   { icon: PartyPopper, title: "Globoflexia", desc: "Figuras de globos que se convierten en el mejor regalo." },

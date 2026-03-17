@@ -100,7 +100,7 @@ const ContactSection = () => {
               <div>
                 <h3 className="font-display font-semibold text-foreground">Ubicación</h3>
                 <p className="text-muted-foreground font-body text-sm">Nos desplazamos a tu evento</p>
-                <p className="text-muted-foreground font-body text-xs mt-1">Madrid y alrededores</p>
+                <p className="text-muted-foreground font-body text-xs mt-1">Valencia y alrededores</p>
               </div>
             </div>
           </motion.div>

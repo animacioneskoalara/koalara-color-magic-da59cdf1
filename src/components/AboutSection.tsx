@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ShieldCheck, Heart, Smile } from "lucide-react";
-import teamImg from "@/assets/team-koalara.jpg";
+import teamImg from "@/assets/pintacaras.jpg";
 
 const values = [
   { icon: ShieldCheck, title: "Seguridad", desc: "Animadores certificados y protocolos de seguridad infantil." },

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import heroImg from "@/assets/hero-party.jpg";
+import heroImg from "@/assets/fiesta-infantil.jpg";
 
 const spring = { type: "spring" as const, stiffness: 100, damping: 14 };
 

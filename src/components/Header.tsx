@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/logo-koalara.jpg";
+import logo from "@/assets/logo-koalara.png";
 
 const navItems = [
   { label: "Inicio", href: "#inicio" },
@@ -18,7 +18,7 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-b border-border">
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
         <a href="#inicio" className="flex items-center gap-2">
-          <img src={logo} alt="Animaciones Koalara" className="h-12 w-auto rounded-xl" />
+          <img src={logo} alt="Animaciones Koalara" className="h-14 w-auto" />
         </a>
 
         {/* Desktop Nav */}
@@ -33,7 +33,7 @@ const Header = () => {
             </a>
           ))}
           <a
-            href="https://wa.me/34600000000?text=Hola!%20Quiero%20reservar%20una%20fiesta"
+            href="https://wa.me/34633049951?text=Hola!%20Quiero%20reservar%20una%20fiesta"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-primary text-primary-foreground font-display font-600 px-5 py-2.5 rounded-full text-sm hover:scale-105 transition-transform shadow-brand"
@@ -66,7 +66,7 @@ const Header = () => {
             </a>
           ))}
           <a
-            href="https://wa.me/34600000000?text=Hola!%20Quiero%20reservar%20una%20fiesta"
+            href="https://wa.me/34633049951?text=Hola!%20Quiero%20reservar%20una%20fiesta"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-primary text-primary-foreground font-display px-5 py-2.5 rounded-full text-sm text-center shadow-brand"

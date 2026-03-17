@@ -90,7 +90,7 @@ const PacksSection = () => (
                 ))}
               </ul>
               <a
-                href={`https://wa.me/34600000000?text=Hola!%20Me%20interesa%20el%20${encodeURIComponent(pack.name)}`}
+                href={`https://wa.me/34633049951?text=Hola!%20Me%20interesa%20el%20${encodeURIComponent(pack.name)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`mt-8 w-full py-3 rounded-full font-display font-semibold text-center transition-transform hover:scale-105 ${

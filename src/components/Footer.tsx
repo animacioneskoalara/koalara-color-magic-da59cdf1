@@ -1,10 +1,10 @@
-import logo from "@/assets/logo-koalara.jpg";
+import logo from "@/assets/logo-koalara.png";
 
 const Footer = () => (
   <footer className="bg-foreground py-10">
     <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
       <div className="flex items-center gap-3">
-        <img src={logo} alt="Animaciones Koalara" className="h-10 rounded-lg" />
+        <img src={logo} alt="Animaciones Koalara" className="h-12 w-auto" />
         <span className="font-display font-semibold text-primary-foreground text-sm">Animaciones Koalara</span>
       </div>
       <p className="font-body text-sm text-primary-foreground/60">

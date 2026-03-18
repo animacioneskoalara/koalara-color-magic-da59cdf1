@@ -11,33 +11,39 @@ const HeroSection = () => (
         animate={{ opacity: 1, x: 0 }}
         transition={spring}
       >
-        <h1 className="text-4xl md:text-6xl font-display font-bold tracking-tight text-foreground text-balance leading-tight">
-          Donde la{" "}
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight text-foreground text-balance leading-tight">
+          Convierte cualquier evento en una experiencia{" "}
           <span className="relative inline-block">
-            <span className="relative z-10 text-primary">magia</span>
+            <span className="relative z-10 text-primary">inolvidable</span>
             <span className="absolute bottom-1 left-0 right-0 h-3 bg-koala-orange/30 rounded-full -z-0" />
           </span>{" "}
-          se vuelve realidad
+          🎉
         </h1>
-        <p className="mt-4 text-lg md:text-xl text-muted-foreground font-body max-w-lg">
-          Experiencias únicas de animación infantil para cumpleaños y eventos que tus hijos nunca olvidarán.
+        <p className="mt-4 text-lg md:text-xl text-muted-foreground font-body max-w-lg text-pretty">
+          Animación infantil personalizada en Valencia y alrededores para cumpleaños, comuniones, bodas y eventos familiares.
+        </p>
+        <p className="mt-2 text-base text-foreground/70 font-body font-medium">
+          Nos encargamos de todo para que tú solo disfrutes.
         </p>
         <div className="mt-8 flex flex-wrap gap-4">
           <a
-            href="https://wa.me/34633049951?text=Hola!%20Quiero%20reservar%20una%20fiesta"
+            href="https://wa.me/34633049951?text=Hola,%20quiero%20información%20para%20un%20evento%20en%20Valencia"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-accent text-accent-foreground font-display font-semibold px-8 py-4 rounded-full text-lg hover:scale-105 transition-transform shadow-accent animate-pulse-soft"
+            className="bg-accent text-accent-foreground font-display font-semibold px-8 py-4 rounded-full text-lg hover:scale-105 transition-transform shadow-accent"
           >
-            ¡Quiero una fiesta inolvidable!
+            Solicitar presupuesto por WhatsApp
           </a>
           <a
-            href="#packs"
+            href="#contacto"
             className="border-2 border-primary text-primary font-display font-semibold px-8 py-4 rounded-full text-lg hover:bg-primary hover:text-primary-foreground transition-colors"
           >
-            Ver Packs
+            Contactar ahora
           </a>
         </div>
+        <p className="mt-4 text-sm text-muted-foreground font-body">
+          Respuesta rápida · Sin compromiso · Fechas limitadas
+        </p>
       </motion.div>
 
       <motion.div
@@ -49,10 +55,13 @@ const HeroSection = () => (
         <div className="rounded-3xl overflow-hidden shadow-brand">
           <img
             src={heroImg}
-            alt="Niños felices en una fiesta de cumpleaños con animadores"
+            alt="Animación infantil en Valencia - niños felices en una fiesta de cumpleaños"
             className="w-full h-auto object-cover aspect-[16/10]"
             loading="eager"
           />
+        </div>
+        <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground font-display font-semibold text-sm px-5 py-2 rounded-full shadow-accent whitespace-nowrap">
+          ⚠️ Fechas limitadas los fines de semana
         </div>
       </motion.div>
     </div>

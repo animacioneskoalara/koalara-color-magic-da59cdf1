@@ -4,21 +4,21 @@ import { Star } from "lucide-react";
 const testimonials = [
   {
     name: "María García",
-    text: "Los niños se lo pasaron increíble. Los animadores son súper profesionales y cariñosos. ¡Repetiremos seguro!",
+    text: "Los niños no pararon de reír. Todo súper organizado y los animadores encantadores. ¡Repetiremos seguro!",
     rating: 5,
     avatar: "MG",
     color: "bg-koala-pink",
   },
   {
     name: "Carlos Rodríguez",
-    text: "Contratamos el Pack Estrella y fue la mejor decisión. Todo organizado al detalle y los peques encantados.",
+    text: "Muy profesionales, nos olvidamos de todo. Los peques disfrutaron de principio a fin.",
     rating: 5,
     avatar: "CR",
     color: "bg-koala-green-light",
   },
   {
     name: "Laura Martínez",
-    text: "Animaciones Koalara hizo del cumpleaños de mi hija un día mágico. El show de magia fue lo más.",
+    text: "Repetiremos seguro. La animación fue increíble y los niños no querían que se acabara.",
     rating: 5,
     avatar: "LM",
     color: "bg-koala-orange-light",

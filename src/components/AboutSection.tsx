@@ -4,7 +4,7 @@ import teamImg from "@/assets/pintacaras.jpg";
 
 const values = [
   { icon: ShieldCheck, title: "Seguridad", desc: "Animadores certificados y protocolos de seguridad infantil." },
-  { icon: Heart, title: "Pasión", desc: "Amamos lo que hacemos y se nota en cada fiesta." },
+  { icon: Heart, title: "Pasión", desc: "Amamos lo que hacemos y se nota en cada evento." },
   { icon: Smile, title: "Diversión", desc: "Risas garantizadas con actividades pensadas para cada edad." },
 ];
 
@@ -17,9 +17,12 @@ const AboutSection = () => (
         viewport={{ once: true }}
         transition={{ type: "spring", stiffness: 100, damping: 14 }}
       >
+        <h3 className="font-display font-bold text-foreground text-xl mb-3">
+          Así son nuestras <span className="text-primary">animaciones</span>
+        </h3>
         <img
           src={teamImg}
-          alt="Equipo de Animaciones Koalara"
+          alt="Animadores infantiles en acción en Valencia - pintacaras para niños"
           className="rounded-3xl shadow-brand w-full object-cover aspect-[4/3]"
           loading="lazy"
         />
@@ -35,7 +38,7 @@ const AboutSection = () => (
           Sobre <span className="text-primary">Nosotros</span>
         </h2>
         <p className="text-muted-foreground font-body text-lg mb-8 text-pretty">
-          En Animaciones Koalara hacemos que cada cumpleaños sea inolvidable con shows, juegos y diversión segura. Nuestro equipo de animadores profesionales está dedicado a crear momentos mágicos para los más pequeños.
+          En Animaciones Koalara hacemos que cada evento sea inolvidable con juegos, pintacaras, globoflexia y diversión segura. Nuestro equipo de animadores profesionales está dedicado a crear los mejores momentos para los más pequeños en Valencia y alrededores.
         </p>
         <div className="space-y-5">
           {values.map((v) => {

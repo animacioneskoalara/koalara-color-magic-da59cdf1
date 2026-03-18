@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
-import { Palette, Music, PartyPopper, Drama, Gamepad2 } from "lucide-react";
+import { Palette, Music, PartyPopper, Gamepad2, Users } from "lucide-react";
 
 const services = [
-  { icon: Palette, title: "Pintacaras", desc: "Diseños creativos y coloridos para los más pequeños." },
-  { icon: Music, title: "Música y Baile", desc: "Coreografías y juegos musicales para mover el esqueleto." },
+  { icon: Gamepad2, title: "Juegos dinámicos", desc: "Gymkanas, carreras y juegos cooperativos para todas las edades." },
+  { icon: Palette, title: "Pintacaras", desc: "Diseños creativos y coloridos que encantarán a los más pequeños." },
   { icon: PartyPopper, title: "Globoflexia", desc: "Figuras de globos que se convierten en el mejor regalo." },
-  { icon: Drama, title: "Disfraces", desc: "Personajes favoritos que cobran vida en tu fiesta." },
-  { icon: Gamepad2, title: "Juegos", desc: "Gymkanas, carreras y juegos cooperativos para todas las edades." },
+  { icon: Music, title: "Música y animación", desc: "Coreografías y juegos musicales para mover el esqueleto." },
+  { icon: Users, title: "Dinámicas grupales", desc: "Actividades en equipo para que todos participen y se diviertan." },
 ];
 
 const container = { hidden: {}, show: { transition: { staggerChildren: 0.08 } } };
@@ -22,13 +22,13 @@ const ServicesSection = () => (
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-center mb-14"
+        className="text-center mb-6"
       >
         <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground">
           Nuestros <span className="text-primary">Servicios</span>
         </h2>
-        <p className="mt-3 text-muted-foreground font-body text-lg max-w-xl mx-auto">
-          Todo lo que necesitas para una fiesta perfecta
+        <p className="mt-3 text-muted-foreground font-body text-lg max-w-2xl mx-auto">
+          Incluimos todo lo necesario para una animación completa
         </p>
       </motion.div>
 
@@ -59,6 +59,15 @@ const ServicesSection = () => (
           );
         })}
       </motion.div>
+
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        className="text-center mt-10 text-foreground/70 font-body font-medium text-lg"
+      >
+        Nos encargamos de todo para que tú solo disfrutes.
+      </motion.p>
     </div>
   </section>
 );

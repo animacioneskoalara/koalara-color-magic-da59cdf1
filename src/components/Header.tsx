@@ -6,7 +6,7 @@ import logo from "@/assets/logo-koalara.png";
 const navItems = [
   { label: "Inicio", href: "#inicio" },
   { label: "Servicios", href: "#servicios" },
-  { label: "Packs", href: "#packs" },
+  { label: "Eventos", href: "#packs" },
   { label: "Testimonios", href: "#testimonios" },
   { label: "Contacto", href: "#contacto" },
 ];
@@ -21,7 +21,6 @@ const Header = () => {
           <img src={logo} alt="Animaciones Koalara" className="h-14 w-auto" />
         </a>
 
-        {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-6">
           {navItems.map((item) => (
             <a
@@ -33,22 +32,20 @@ const Header = () => {
             </a>
           ))}
           <a
-            href="https://wa.me/34633049951?text=Hola!%20Quiero%20reservar%20una%20fiesta"
+            href="https://wa.me/34633049951?text=Hola,%20quiero%20información%20para%20un%20evento%20en%20Valencia"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-primary text-primary-foreground font-display font-600 px-5 py-2.5 rounded-full text-sm hover:scale-105 transition-transform shadow-brand"
           >
-            Reserva tu fiesta
+            Reservar fecha
           </a>
         </nav>
 
-        {/* Mobile toggle */}
         <button className="md:hidden text-foreground" onClick={() => setOpen(!open)}>
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
-      {/* Mobile Nav */}
       {open && (
         <motion.nav
           initial={{ opacity: 0, y: -10 }}
@@ -66,12 +63,12 @@ const Header = () => {
             </a>
           ))}
           <a
-            href="https://wa.me/34633049951?text=Hola!%20Quiero%20reservar%20una%20fiesta"
+            href="https://wa.me/34633049951?text=Hola,%20quiero%20información%20para%20un%20evento%20en%20Valencia"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-primary text-primary-foreground font-display px-5 py-2.5 rounded-full text-sm text-center shadow-brand"
           >
-            Reserva tu fiesta
+            Reservar fecha
           </a>
         </motion.nav>
       )}
